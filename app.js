@@ -15,6 +15,25 @@ function startingGrid(){
         }
         while(j < 16);
     }
+
+    coloringGrid();
 }
 
 startingGrid();
+
+function coloringGrid(){
+    let gridItems = document.querySelectorAll('.small');
+    gridItems = [...gridItems];
+
+    gridItems.forEach((item) => {
+        let gridItem = item;
+        gridItem.count = 1;
+        gridItem.addEventListener('mouseenter',
+            (e) => {
+                e.target.style.backgroundColor = '#6A6A6A';
+                e.target.count += 1;
+                e.target.style.opacity = 0.2 * e.target.count;
+            }
+        )
+    });
+}
