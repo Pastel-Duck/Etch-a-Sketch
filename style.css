@@ -23,3 +23,11 @@ body{
     border: 1px solid black;
     flex-grow: 1;
 }
+
+.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
